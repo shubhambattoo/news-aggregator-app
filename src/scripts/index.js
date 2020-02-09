@@ -1,2 +1,1 @@
-console.log(process.env.APIKEY);
-console.log("js loaded");
+console.log('js loaded');

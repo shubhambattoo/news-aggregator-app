@@ -1,5 +1,23 @@
-$body-color: blue;
+:root {
+  --text-size: 1.4rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
 
 body {
-  color: $body-color;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-size);
+  // background-color: red;
 }
+
