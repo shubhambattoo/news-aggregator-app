@@ -135,7 +135,7 @@ function renderNews(news) {
             ${n.title}
           </h2>
         </div>
-        <p class="article__body article-description">
+        <p class="article-description">
           ${n.description ? n.description : ''}
         </p>
         <div class="article__footer">
