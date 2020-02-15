@@ -153,6 +153,7 @@ searchBox.addEventListener('keyup', e => {
   clearSearch.style.display = 'block';
   if (e.keyCode === 13) {
     loader.style.display = 'flex';
+    newsContainer.style.display = 'none';
     headlinesFilter.q = e.target.value.trim();
     articles = [];
     getArticles(true);
