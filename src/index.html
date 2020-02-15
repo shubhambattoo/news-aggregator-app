@@ -15,6 +15,24 @@
   </head>
   <body>
     <header>
+      <div class="language-switcher">
+        <label class="label">
+          <div class="toggle">
+            <input
+              class="toggle-state"
+              type="checkbox"
+              name="check"
+              value="check"
+              id="mode-switch"
+            />
+            <div class="toggle-inner">
+              <div class="indicator"></div>
+            </div>
+            <div class="active-bg"></div>
+          </div>
+          <div class="label-text">Enable Dark Mode</div>
+        </label>
+      </div>
       <div class="container">
         <div class="navbar-brand brand-logo">
           <a href="#" class="navbar-item">
@@ -31,9 +49,24 @@
           id="search"
           placeholder="Type and press enter to search"
         />
+
+        <button class="clear" id="clear-search">
+          &times;
+        </button>
       </section>
 
       <section class="section news">
+        <ul id="news-articles" class="articles"></ul>
+        <div class="not-found" style="display: none;">
+          <div class="notification is-info">
+            Not Article(s) were found based on your search
+          </div>
+        </div>
+        <div class="error" style="display: none;">
+          <div class="notification is-danger">
+            Could not fetch Articles. Try Again.
+          </div>
+        </div>
         <div class="loading" id="loading">
           <div class="lds-spinner">
             <div></div>
@@ -50,33 +83,7 @@
             <div></div>
           </div>
         </div>
-
-        <ul id="news-articles" class="articles">
-          <li class="article">
-            <a class="article-link">
-              <div class="article__head">
-                <img
-                  src="https://i.ndtvimg.com/i/2016-10/soda_625x300_81476179264.jpg"
-                  alt="news image"
-                  class="article-img"
-                />
-                <div class="article-title">
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-                </div>
-              </div>
-              <div class="article__body article-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                accusantium molestias amet similique ab modi corporis tempora
-                soluta dolores mollitia!
-              </div>
-              <div class="article__footer">
-                <div class="article-author">
-                  - Lorem, ipsum
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <button class="button" id="show-more">Show More</button>
       </section>
     </main>
 
