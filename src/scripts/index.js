@@ -21,7 +21,7 @@ let totalResults = 0;
 let state = 'h';
 const headlinesFilter = {
   page: 1,
-  pageSize: 9,
+  pageSize: 20,
   q: ''
 };
 let theme;
@@ -131,17 +131,17 @@ function renderNews(news) {
             alt="${n.title}"
             class="article-img"
           />
-          <div class="article-title">
+          <h2 class="article-title">
             ${n.title}
-          </div>
+          </h2>
         </div>
-        <div class="article__body article-description">
+        <p class="article__body article-description">
           ${n.description ? n.description : ''}
-        </div>
+        </p>
         <div class="article__footer">
-          <div class="article-author">
+          <span class="article-author">
             - ${author}
-          </div>
+          </span>
         </div>
       </a>
     </li>`;
